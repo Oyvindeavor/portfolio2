@@ -1,0 +1,21 @@
+[
+    {
+      "title": "Crypto Trading Bot",
+      "slug": "crypto-trading-bot",
+      "description": "An automated bot using Binance API with LSTM forecasting.",
+      "image": "/images/testImage.jpg"
+    },
+    {
+      "title": "Car Registry App",
+      "slug": "car-registry-app",
+      "description": "Track car service history and expenses using Supabase and Vegvesen API.",
+      "image": "/images/testImage.jpg"
+    },
+    {
+      "title": "Car Registry App",
+      "slug": "car-registry",
+      "description": "Track car service history and expenses using Supabase and Vegvesen API.",
+      "image": "/images/testImage.jpg"
+    }
+  ]
+  

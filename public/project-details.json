@@ -1,0 +1,29 @@
+[
+    {
+      "slug": "crypto-trading-bot",
+      "title": "Crypto Trading Bot",
+      "image": "/images/testImage.jpg",
+      "description": "An automated bot using Binance API with LSTM forecasting.",
+      "tech": ["Next.js", "Node.js", "TensorFlow.js"],
+      "features": [
+        "Real-time trading with WebSocket",
+        "Supports multiple strategies",
+        "LSTM model for prediction"
+      ],
+      "link": "https://github.com/yourname/crypto-bot"
+    },
+    {
+      "slug": "car-registry-app",
+      "title": "Car Registry App",
+      "image": "/images/testImage.jpg",
+      "description": "Track car service history and expenses using Supabase and Vegvesen API.",
+      "tech": ["Next.js", "Supabase", "Tailwind CSS"],
+      "features": [
+        "VIN lookup via Vegvesen API",
+        "Upload receipts and photos",
+        "Expense tracking and visual history"
+      ],
+      "link": "https://github.com/yourname/car-registry"
+    }
+  ]
+  
