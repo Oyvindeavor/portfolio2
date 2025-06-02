@@ -15,7 +15,7 @@ import type { ProjectSummary } from '@/types/project'
  * // Output: [{ title: 'Project 1', slug: 'project-1', image: '/images/project1.jpg', description: 'Description of project 1' }, ...]
  */
 export async function getProjects(): Promise<ProjectSummary[]> {
-  const filePath = path.join(process.cwd(), 'public/projects.json')
+  const filePath = path.join(process.cwd(), 'src/content/projects.json')
   const fileData = await fs.readFile(filePath, 'utf8')
   return JSON.parse(fileData)
 }

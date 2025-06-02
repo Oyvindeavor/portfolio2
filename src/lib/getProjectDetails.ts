@@ -23,7 +23,7 @@ import type { ProjectDetail } from '@/types/project'
  * }
  */
 export async function getProjectDetails(slug: string): Promise<ProjectDetail | null> {
-  const filePath = path.join(process.cwd(), 'public/project-details.json')
+  const filePath = path.join(process.cwd(), 'src/content/project-details.json')
   const fileData = await fs.readFile(filePath, 'utf8')
   const projects: ProjectDetail[] = JSON.parse(fileData)
 
