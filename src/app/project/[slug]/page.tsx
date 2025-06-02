@@ -6,7 +6,8 @@ import TechStack from '@/components/TechStack'
 import Features from '@/components/Features'
 import ProjectLinks from '@/components/ProjectLinks'
 
-export default async function ProjectPage({ params }: { params: { slug: string } }) {
+export default async function ProjectPage(props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params
   const project: ProjectDetails | null = await getProjectDetails(params.slug)
 
   if (!project) return notFound()
