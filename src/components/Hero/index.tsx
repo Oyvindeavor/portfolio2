@@ -49,57 +49,45 @@ export default function Hero() {
   return (
     <div
       ref={containerRef}
-      className="from-background to-muted relative space-y-2 overflow-hidden bg-gradient-to-b px-4 py-16 text-center md:px-8 lg:px-16"
+      className="relative overflow-hidden bg-[url('/images/ccchaos.svg')] bg-cover py-24 text-center"
     >
-      <AnimatedHeroText />
+      {/* Hero Text and Button */}
+      <div className="relative z-10">
+        <AnimatedHeroText />
 
-      <div className="z-10 flex flex-col items-center justify-center space-y-4">
-        <HeroButton onClick={spawnLogos} />
+        <div className="flex flex-col items-center justify-center space-y-4">
+          <HeroButton onClick={spawnLogos} />
+        </div>
+
+        <p className="text-muted-primary mx-auto max-w-2xl text-lg">
+          Developer creating amazing digital experiences. Explore my work and let&apos;s build
+          something great together.
+        </p>
       </div>
 
-      <p className="text-muted-foreground mx-auto max-w-2xl text-xl">
-        I&apos;m a developer creating amazing digital experiences. Explore my work and let&apos;s
-        build something great together.
-      </p>
-
-      {/* Dropped Logos */}
+      {/* Floating Logos */}
       {logosState.length > 0 && (
-        <div className="pointer-events-none absolute inset-0 z-0">
+        <div className="pointer-events-none absolute inset-0 z-10">
           {logosState.map(({ src, x, y, id }) => (
             <motion.img
               key={id}
               src={src}
               alt="Framework Logo"
               className="pointer-events-auto absolute h-12 w-12 cursor-grab"
-              style={{
-                top: y,
-                left: x,
-                transform: 'translate(-50%, -50%)' // center the drag origin
-              }}
+              style={{ top: y, left: x, transform: 'translate(-50%, -50%)' }}
               drag
               dragConstraints={containerRef}
               dragElastic={0.5}
               dragMomentum
-              initial={{
-                opacity: 0,
-                rotate: Math.random() * 360
-              }}
+              initial={{ opacity: 0, rotate: Math.random() * 360 }}
               animate={{
                 opacity: 1,
-                y: containerHeight, // settle near bottom
+                y: containerHeight,
                 rotate: Math.random() * 360
               }}
-              transition={{
-                type: 'spring',
-                stiffness: 40,
-                damping: 25,
-                mass: 3
-              }}
+              transition={{ type: 'spring', stiffness: 40, damping: 25, mass: 3 }}
               whileTap={{ cursor: 'grabbing' }}
-              whileDrag={{
-                rotate: 20,
-                scale: 1.1
-              }}
+              whileDrag={{ rotate: 20, scale: 1.1 }}
             />
           ))}
         </div>

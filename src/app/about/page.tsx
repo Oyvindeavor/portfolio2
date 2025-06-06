@@ -18,13 +18,11 @@ export default function AboutPage() {
   ]
 
   return (
-    <div className="from-background to-muted/20 min-h-screen bg-gradient-to-br">
+    <div className="min-h-screen bg-[url('/images/cccoil.svg')] bg-contain bg-center bg-no-repeat">
       <div className="container px-4 py-16 lg:px-8">
         {/* Header */}
         <div className="mb-16 text-center">
-          <h1 className="mb-4 text-5xl font-bold">
-            Øyvind <span className="text-primary">Riisnes</span>
-          </h1>
+          <h1 className="mb-4 text-3xl font-bold">Øyvind Riisnes</h1>
           <p className="text-muted-foreground mb-6 text-xl">Frontend Developer & UI/UX Designer</p>
           <p className="text-muted-foreground mx-auto mb-8 max-w-2xl">
             I create beautiful, responsive web experiences with modern technologies. Specializing in

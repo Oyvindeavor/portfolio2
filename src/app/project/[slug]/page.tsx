@@ -13,24 +13,27 @@ export default async function ProjectPage(props: { params: Promise<{ slug: strin
   if (!project) return notFound()
 
   return (
-    <div className="mx-auto max-w-3xl p-6">
+    <div className="mx-auto mb-12 max-w-3xl bg-[#020618] px-4 py-8 sm:px-6 lg:px-8">
+      {/* Project details */}
+      <h1 className="mt-2 mb-12 text-3xl font-bold">{project.title}</h1>
       {/* Carousel for project images */}
       <ProjectCarousel images={project.images} />
       {/* Project Links*/}
       <ProjectLinks links={project.links} />
 
-      {/* Project details */}
-      <h1 className="mt-2 text-3xl font-bold">{project.title}</h1>
-
-      <article className="mt-6 space-y-4 text-gray-800">
+      <article className="mt-8 border p-6">
         {Array.isArray(project.description) ? (
-          project.description.map((paragraph, idx) => (
-            <p key={idx} className="mt-4 leading-relaxed text-gray-800">
-              {paragraph}
-            </p>
-          ))
+          <div className="space-y-4 sm:space-y-6">
+            {project.description.map((paragraph, idx) => (
+              <p key={idx} className="text-base leading-relaxed sm:text-lg sm:leading-loose">
+                {paragraph}
+              </p>
+            ))}
+          </div>
         ) : (
-          <p className="mt-4 leading-relaxed text-gray-800">{project.description}</p>
+          <p className="text-base leading-relaxed sm:text-lg sm:leading-loose">
+            {project.description}
+          </p>
         )}
       </article>
       <TechStack tech={project.tech} />

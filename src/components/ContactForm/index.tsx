@@ -57,6 +57,7 @@ export function ContactForm() {
           required
           placeholder="What do you want to say?"
           rows={6}
+          className="bg-card"
         />
       </div>
 

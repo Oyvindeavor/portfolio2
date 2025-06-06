@@ -16,7 +16,7 @@ const titleText = Sora({
 })
 
 const customFont = Space_Grotesk({
-  weight: '400',
+  weight: '700',
   subsets: ['latin'],
   variable: '--font-custom',
   style: 'normal',
@@ -36,11 +36,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${bodyText.variable} ${titleText.variable} ${customFont.variable} antialiased`}
+        className={`${bodyText.variable} ${titleText.variable} ${customFont.variable} bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px] antialiased dark:bg-slate-950 dark:[&>div]:bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)]`}
       >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="dark">
           <Navbar />
-          <main className="relative z-10 mx-auto max-w-4xl rounded-lg bg-white px-4 py-8 shadow-lg md:px-6 lg:px-8 dark:bg-gray-900">
+          {/* Main content area with page transition */}
+          <main className="relative z-10 mx-auto max-w-4xl border-x border-slate-200 transition-colors md:px-6 lg:px-8 dark:border-slate-800">
             <PageTransition>{children}</PageTransition>
           </main>
         </ThemeProvider>

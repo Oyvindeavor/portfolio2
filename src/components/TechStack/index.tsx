@@ -6,10 +6,7 @@ export default function TechStack({ tech }: { tech: Tech[] }) {
     <div className="mt-6">
       <ul className="flex flex-wrap gap-2" aria-labelledby="tech-stack-heading">
         {tech.map((tech, idx) => (
-          <li
-            key={idx}
-            className="flex items-center gap-1 rounded bg-gray-200 px-2 py-1 text-sm dark:bg-gray-700"
-          >
+          <li key={idx} className="flex items-center gap-1 rounded border px-2 py-1 text-sm">
             {tech.name}
             {tech.icon ? (
               <Image

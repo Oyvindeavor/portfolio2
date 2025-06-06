@@ -50,7 +50,7 @@ export default function ProjectCarousel({ images }: { images: ProjectImage[] }) 
             {images.map((image, index: number) => (
               <CarouselItem key={index} className="flex flex-col">
                 <div
-                  className="w-full cursor-pointer overflow-hidden rounded-md transition-transform hover:scale-[1.02]"
+                  className="w-full cursor-pointer overflow-hidden border transition-transform hover:scale-[1.01]"
                   onClick={() => openModal(index)}
                 >
                   <AspectRatio ratio={16 / 9} className="bg-muted">
