@@ -30,7 +30,7 @@ export function Navbar() {
       <div className="mx-auto flex max-w-4xl items-center justify-between px-4 py-3 md:h-16">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg shadow-[0_0_8px_#c084fc] shadow-purple-600 transition-all duration-300 hover:shadow-[0_0_40px_#c084fc] hover:shadow-purple-400">
+          <div className="flex h-8 w-8 items-center justify-center rounded-lg shadow-[0_0_8px_#c084fc] shadow-purple-600 transition-all duration-300 hover:shadow-[0_0_40px_#c084fc] hover:shadow-purple-400 focus:shadow-[0_0_40px_#c084fc] focus:shadow-purple-400">
             <span className="text-lg font-bold text-white">Ø</span>
           </div>
         </Link>

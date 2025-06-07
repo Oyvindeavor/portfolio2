@@ -9,6 +9,8 @@ import { Dialog, DialogContent, DialogTitle } from '../ui/dialog'
 import { Button } from '../ui/button'
 import Image from 'next/image'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+const blurDataUrl =
+  'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNsYrjfBwAEXgHxG49oWwAAAABJRU5ErkJggg=='
 
 export default function ProjectCarousel({ images }: { images: ProjectImage[] }) {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null)
@@ -55,6 +57,9 @@ export default function ProjectCarousel({ images }: { images: ProjectImage[] }) 
                       className="object-cover"
                       fill
                       priority={index === 0}
+                      loading="eager"
+                      placeholder="blur"
+                      blurDataURL={blurDataUrl}
                     />
                   </AspectRatio>
                 </div>

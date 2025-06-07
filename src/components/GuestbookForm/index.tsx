@@ -26,7 +26,7 @@ export function GuestbookForm() {
         type="submit"
         size="lg"
         variant={'ghost'}
-        className="border-border/100 hover:shadow-primary/100 hover:border-primary/100 cursor-pointer overflow-hidden border p-0 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl"
+        className="border-border/100 hover:shadow-primary/100 hover:border-primary/100 focus:shadow-primary/100 focus:border-primary/100 cursor-pointer overflow-hidden border p-0 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl focus:shadow-2xl"
       >
         Sign Guestbook
         <Pen className="ml-2 inline h-4 w-4" />

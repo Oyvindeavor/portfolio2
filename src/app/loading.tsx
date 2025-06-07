@@ -3,9 +3,9 @@ import { Loader2 } from 'lucide-react'
 export default function Loading() {
   return (
     <div className="z-50 flex items-center justify-center backdrop-blur-sm">
-      <div className="relative flex h-screen flex-col items-center justify-center gap-6">
+      <div className="relative flex min-h-screen flex-col items-center justify-center gap-6 p-4">
         {/* Main spinner with neon glow layers */}
-        <div className="relative">
+        <div className="height-16 relative w-16 animate-spin rounded-full bg-purple-600/20 shadow-[0_0_10px_#c084fc] shadow-purple-500 transition-all duration-300 hover:shadow-[0_0_40px_#c084fc] focus:shadow-[0_0_40px_#c084fc]">
           <Loader2
             className="h-16 w-16 animate-spin text-purple-400 drop-shadow-2xl"
             strokeWidth={2.5}
