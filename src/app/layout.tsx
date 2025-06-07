@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Sora, Space_Grotesk, Work_Sans } from 'next/font/google'
 import { Navbar } from '@/components/Navbar'
-import { ThemeProvider } from '@/components/ThemeProvider'
 import { PageTransition } from '@/components/PageTransition'
 import './globals.css'
 
@@ -34,17 +33,15 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="dark">
       <body
         className={`${bodyText.variable} ${titleText.variable} ${customFont.variable} bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px] antialiased dark:bg-slate-950 dark:[&>div]:bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)]`}
       >
-        <ThemeProvider attribute="class" defaultTheme="dark" themes={['dark'] as const}>
-          <Navbar />
-          {/* Main content area with page transition */}
-          <main className="relative z-10 mx-auto max-w-4xl border-x border-slate-200 transition-colors md:px-6 lg:px-8 dark:border-slate-800">
-            <PageTransition>{children}</PageTransition>
-          </main>
-        </ThemeProvider>
+        <Navbar />
+        {/* Main content area with page transition */}
+        <main className="relative z-10 mx-auto max-w-4xl border-x border-slate-200 transition-colors md:px-6 lg:px-8 dark:border-slate-800">
+          <PageTransition>{children}</PageTransition>
+        </main>
       </body>
     </html>
   )
