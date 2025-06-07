@@ -41,11 +41,11 @@ export default function ProjectCarousel({ images }: { images: ProjectImage[] }) 
             loop: images.length > 1
           }}
         >
-          <CarouselContent>
+          <CarouselContent className="flex w-full gap-4">
             {images.map((image, index: number) => (
               <CarouselItem key={index} className="flex flex-col">
                 <div
-                  className="w-full cursor-pointer overflow-hidden border transition-transform hover:scale-[1.01]"
+                  className="cursor-pointer overflow-hidden border transition-transform hover:scale-[1.01]"
                   onClick={() => openModal(index)}
                 >
                   <AspectRatio ratio={16 / 9} className="bg-muted">
@@ -67,10 +67,13 @@ export default function ProjectCarousel({ images }: { images: ProjectImage[] }) 
             ))}
           </CarouselContent>
           {images.length > 1 && (
-            <>
-              <CarouselPrevious className="ml-12 max-sm:ml-4" />
-              <CarouselNext className="mr-12 max-sm:mr-4" />
-            </>
+            <div className="hidden px-2 max-sm:absolute max-sm:inset-0 max-sm:z-10 max-sm:flex max-sm:items-center max-sm:justify-between">
+              <CarouselPrevious className="max-sm:static max-sm:rounded-full max-sm:bg-black/30 max-sm:p-1 max-sm:backdrop-blur-sm" />
+              <CarouselNext
+                color="black"
+                className="max-sm:static max-sm:rounded-full max-sm:bg-black max-sm:p-1 max-sm:backdrop-blur-sm"
+              />
+            </div>
           )}
         </Carousel>
       )}
