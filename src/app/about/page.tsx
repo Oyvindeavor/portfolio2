@@ -169,7 +169,7 @@ export default function AboutPage() {
             asChild
             size="lg"
             variant={'ghost'}
-            className="border-border/100 hover:shadow-primary/100 hover:border-primary/100 focus:shadow-primary/100 focus:border-primary/100 cursor-pointer overflow-hidden border p-0 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl focus:shadow-2xl"
+            className="border-border/100 hover:shadow-primary/100 hover:border-primary/100 focus:shadow-primary/100 focus:border-primary/100 active:border-primary/100 cursor-pointer overflow-hidden border p-0 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl focus:shadow-2xl active:shadow-2xl"
           >
             <Link href="https://github.com" className="gap-2">
               <Github className="size-5" />
