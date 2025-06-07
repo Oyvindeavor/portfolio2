@@ -10,11 +10,10 @@ export default function AboutPage() {
     'React',
     'Next.js',
     'TypeScript',
-    'Tailwind CSS',
-    'Node.js',
-    'Git',
+    'Tailwind',
+    'Git & GitHub',
     'Figma',
-    'Jest'
+    'Testing (Jest & RTL)'
   ]
 
   return (
@@ -28,12 +27,6 @@ export default function AboutPage() {
             I create beautiful, responsive web experiences with modern technologies. Specializing in
             React and Next.js, I focus on performance and user experience.
           </p>
-          <Button asChild variant="outline" size="lg">
-            <Link href="https://github.com" target="_blank" className="gap-2">
-              <Github className="size-5" />
-              View My Work
-            </Link>
-          </Button>
         </div>
 
         {/* Main Content Grid */}
@@ -66,23 +59,6 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="border-primary/20 space-y-6 border-l-2 pl-6">
-                  <div className="relative">
-                    <div className="bg-primary absolute top-2 -left-8 h-3 w-3 rounded-full"></div>
-                    <div className="space-y-1">
-                      <div className="flex items-start justify-between">
-                        <div>
-                          <h3 className="text-lg font-semibold">Junior Front end developer</h3>
-                          <p className="text-primary font-medium">You?</p>
-                        </div>
-                        <Badge variant="secondary">2025 - Present</Badge>
-                      </div>
-                      <p className="text-muted-foreground">
-                        Currently working on various projects, focusing on building scalable and
-                        maintainable web applications.
-                      </p>
-                    </div>
-                  </div>
-
                   <div className="relative">
                     <div className="bg-muted-foreground absolute top-2 -left-8 h-3 w-3 rounded-full"></div>
                     <div className="space-y-1">
@@ -165,10 +141,17 @@ export default function AboutPage() {
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="text-2xl">📚</span>
+                  <span className="text-2xl">🚙</span>
                   <div>
-                    <p className="font-medium">Reading</p>
-                    <p className="text-muted-foreground text-sm">Sci-fi novels</p>
+                    <p className="font-medium">Car detailing</p>
+                    <p className="text-muted-foreground text-sm">Hobby detailer</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-2xl">🔧</span>
+                  <div>
+                    <p className="font-medium">Car repair</p>
+                    <p className="text-muted-foreground text-sm">Love working on my own car</p>
                   </div>
                 </div>
               </CardContent>
@@ -182,7 +165,12 @@ export default function AboutPage() {
           <p className="text-muted-foreground mb-6">
             Open to interesting projects and collaborations.
           </p>
-          <Button asChild size="lg">
+          <Button
+            asChild
+            size="lg"
+            variant={'ghost'}
+            className="border-border/100 hover:shadow-primary/100 hover:border-primary/100 cursor-pointer overflow-hidden border p-0 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl"
+          >
             <Link href="https://github.com" className="gap-2">
               <Github className="size-5" />
               Check Out My Projects

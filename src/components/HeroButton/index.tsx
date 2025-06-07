@@ -41,7 +41,5 @@ const box = {
   height: 50,
   borderRadius: 5,
   cursor: 'pointer',
-  position: 'relative' as const,
-
-  backdropFilter: 'blur(2px)'
+  position: 'relative' as const
 }

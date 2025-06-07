@@ -25,9 +25,9 @@ export async function GuestbookEntries() {
   })
 
   return (
-    <div className="mt-6 space-y-4">
+    <div className="mt-10 space-y-4">
       {entries.map((entry: GuestbookEntry) => (
-        <div key={entry.id} className="rounded border p-3 text-sm">
+        <div key={entry.id} className="bg-muted/30 rounded-md border p-3 text-sm">
           <div className="mb-2 flex items-center justify-between">
             <p className="mb-2 font-semibold">{entry.name}</p>
             <p className="text-muted-foreground text-xs">

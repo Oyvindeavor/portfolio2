@@ -6,7 +6,7 @@ interface FeaturesProps {
 
 export default function Features({ features }: FeaturesProps) {
   return (
-    <div className="mt-6">
+    <div className="mx-auto mt-6 max-w-xl">
       <h2 className="text-foreground mb-3 text-lg font-semibold tracking-tight">Features</h2>
       <ul className="space-y-2">
         {features.map((feat, i) => (

@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
 import { Label } from '@/components/ui/label'
+import { SendHorizonal } from 'lucide-react'
 
 export function ContactForm() {
   const [status, setStatus] = useState<string | null>(null)
@@ -38,15 +39,28 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="mx-auto max-w-xl space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid gap-2">
         <Label htmlFor="name">Name</Label>
-        <Input name="name" id="name" required placeholder="Your name" />
+        <Input
+          name="name"
+          id="name"
+          required
+          placeholder="Your name"
+          className="border-border/100 focus:shadow-primary/100 focus:border-primary/100 w-full overflow-hidden rounded border p-0 p-2 backdrop-blur-sm transition-all duration-300 focus:shadow-2xl"
+        />
       </div>
 
       <div className="grid gap-2">
         <Label htmlFor="email">Email</Label>
-        <Input name="email" id="email" type="email" required placeholder="your@email.com" />
+        <Input
+          name="email"
+          id="email"
+          type="email"
+          required
+          placeholder="your@email.com"
+          className="border-border/100 focus:shadow-primary/100 focus:border-primary/100 w-full overflow-hidden rounded border p-0 p-2 backdrop-blur-sm transition-all duration-300 focus:shadow-2xl"
+        />
       </div>
 
       <div className="grid gap-2">
@@ -57,12 +71,19 @@ export function ContactForm() {
           required
           placeholder="What do you want to say?"
           rows={6}
-          className="bg-card"
+          className="bg-card border-border/100 focus:shadow-primary/100 focus:border-primary/100 w-full overflow-hidden rounded border p-0 p-2 backdrop-blur-sm transition-all duration-300 focus:shadow-2xl"
         />
       </div>
 
-      <Button type="submit" disabled={loading} className="w-full">
+      <Button
+        type="submit"
+        size={'lg'}
+        variant={'ghost'}
+        disabled={loading}
+        className="border-border/100 hover:shadow-primary/100 hover:border-primary/100 cursor-pointer overflow-hidden border p-0 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl"
+      >
         {loading ? 'Sending...' : 'Send Message'}
+        <SendHorizonal className="ml-2 inline h-4 w-4" />
       </Button>
 
       {status && <p className="pt-2 text-center text-sm">{status}</p>}

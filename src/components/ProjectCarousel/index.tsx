@@ -8,7 +8,7 @@ import { AspectRatio } from '../ui/aspect-ratio'
 import { Dialog, DialogContent, DialogTitle } from '../ui/dialog'
 import { Button } from '../ui/button'
 import Image from 'next/image'
-import { ChevronLeft, ChevronRight, X } from 'lucide-react'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 export default function ProjectCarousel({ images }: { images: ProjectImage[] }) {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null)
@@ -17,11 +17,6 @@ export default function ProjectCarousel({ images }: { images: ProjectImage[] }) 
   const openModal = (index: number) => {
     setSelectedImageIndex(index)
     setIsModalOpen(true)
-  }
-
-  const closeModal = () => {
-    setIsModalOpen(false)
-    setSelectedImageIndex(null)
   }
 
   const navigateImage = (direction: 'prev' | 'next') => {
@@ -99,7 +94,7 @@ export default function ProjectCarousel({ images }: { images: ProjectImage[] }) 
 
       {/* Image Modal */}
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-        <DialogContent className="bg-black/95 p-0 backdrop-blur-sm transition-all duration-300 md:min-h-[90vh] md:min-w-[90vw] lg:min-h-[70vh] lg:min-w-[70vw]">
+        <DialogContent className="shadow-primary/100 cursor-pointer overflow-hidden border p-0 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl md:min-h-[90vh] md:min-w-[90vw] lg:min-h-[70vh] lg:min-w-[70vw]">
           <DialogTitle className="sr-only">
             {selectedImage?.caption ||
               selectedImage?.alt ||
@@ -107,14 +102,6 @@ export default function ProjectCarousel({ images }: { images: ProjectImage[] }) 
           </DialogTitle>
           <div className="relative flex h-full items-center justify-center">
             {/* Close button */}
-            <Button
-              variant="ghost"
-              size="icon"
-              className="absolute top-4 right-4 z-50 text-white hover:bg-white/20"
-              onClick={closeModal}
-            >
-              <X className="h-6 w-6" />
-            </Button>
 
             {/* Navigation buttons */}
             {images && images.length > 1 && (
@@ -154,7 +141,7 @@ export default function ProjectCarousel({ images }: { images: ProjectImage[] }) 
 
                 {/* Caption */}
                 {selectedImage.caption && (
-                  <p className="mt-4 max-w-2xl text-center text-sm text-white/90">
+                  <p className="bg-muted mt-4 max-w-2xl rounded-lg p-4 text-center text-sm text-white shadow-lg">
                     {selectedImage.caption}
                   </p>
                 )}
