@@ -57,7 +57,12 @@ export function Navbar() {
 
         {/* CTA - Github logo */}
         <div className="hidden md:block">
-          <a href="www.github.com/oyvindriisnes" target="_blank" rel="noopener noreferrer">
+          <a
+            title="Github Profile"
+            href="https://www.github.com/Oyvindeavor"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Github />
           </a>
         </div>
