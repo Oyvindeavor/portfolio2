@@ -3,7 +3,6 @@ import { getProjectDetails } from '@/lib/getProjectDetails'
 import type { ProjectDetail as ProjectDetails } from '@/types/project'
 import ProjectCarousel from '@/components/ProjectCarousel'
 import TechStack from '@/components/TechStack'
-import Features from '@/components/Features'
 import ProjectLinks from '@/components/ProjectLinks'
 import ReactMarkdown from 'react-markdown'
 import { Metadata } from 'next'
@@ -30,15 +29,14 @@ export default async function ProjectPage(props: { params: Promise<{ slug: strin
       <h1 className="sr-only">{project.title}</h1>
       {/* Carousel for project images */}
       <ProjectCarousel images={project.images} />
+
       {/* Project Links*/}
       <ProjectLinks links={project.links} />
+      <TechStack tech={project.tech} />
 
       <article className="prose prose-invert dark:prose-invert mt-8 max-w-none">
         <ReactMarkdown>{markdown}</ReactMarkdown>
       </article>
-      <TechStack tech={project.tech} />
-
-      <Features features={project.features} />
     </div>
   )
 }
