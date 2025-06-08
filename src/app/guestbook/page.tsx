@@ -2,9 +2,10 @@ import { GuestbookForm } from '@/components/GuestbookForm'
 import { GuestbookEntries } from '@/components/GuestbookEntries'
 import { NotebookText } from 'lucide-react'
 import { Separator } from '@/components/ui/separator'
+import { Metadata } from 'next'
 
-export const metadata = {
-  title: 'Guestbook',
+export const metadata: Metadata = {
+  title: 'Guestbook - Øyvind Riisnes',
   description: 'Sign my guestbook!'
 }
 

@@ -6,6 +6,13 @@ import TechStack from '@/components/TechStack'
 import Features from '@/components/Features'
 import ProjectLinks from '@/components/ProjectLinks'
 import ReactMarkdown from 'react-markdown'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: `Project - Øyvind Riisnes`,
+  description:
+    'Explore the details of my projects, including technologies used, features, and links.'
+}
 
 export default async function ProjectPage(props: { params: Promise<{ slug: string }> }) {
   const params = await props.params

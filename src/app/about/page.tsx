@@ -1,9 +1,14 @@
 import { Github } from 'lucide-react'
 import Link from 'next/link'
-
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'About - Øyvind Riisnes',
+  description: 'Learn more about Øyvind Riisnes, a frontend developer and UI/UX designer.'
+}
 
 export default function AboutPage() {
   const skills = [

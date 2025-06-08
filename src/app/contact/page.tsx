@@ -1,4 +1,11 @@
 import { ContactForm } from '@/components/ContactForm'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Contact - Øyvind Riisnes',
+  description:
+    'Get in touch with Me Øyvind Riisnes, a frontend developer and UI/UX designer. I am always interested in hearing about new opportunities and interesting projects.'
+}
 
 export default function ContactPage() {
   return (

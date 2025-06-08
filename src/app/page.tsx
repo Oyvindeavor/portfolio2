@@ -1,5 +1,12 @@
 import ProjectCardSection from '@/components/ProjectCardSection'
 import Hero from '@/components/Hero'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Home - Øyvind Riisnes',
+  description:
+    'Welcome to my portfolio! Explore my projects and learn more about my work as a frontend developer.'
+}
 
 export default async function Home() {
   return (
